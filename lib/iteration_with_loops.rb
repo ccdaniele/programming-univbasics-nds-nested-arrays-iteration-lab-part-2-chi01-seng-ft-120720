@@ -2,14 +2,12 @@ def find_min_in_nested_arrays(src)
 outer_results = []
 row_index = 0
 new_src = []
+counter = 0
 
-new_src << src [0].sort { |a, b| b <=> a }
-new_src << src [1].sort { |a, b| b <=> a }
-new_src << src [2].sort { |a, b| b <=> a }
-new_src << src [3].sort { |a, b| b <=> a }
-new_src << src [4].sort { |a, b| b <=> a }
-new_src << src [5].sort { |a, b| b <=> a }
-new_src << src [6].sort { |a, b| b <=> a }
+while counter < src.count do
+  new_src << src[counter].sort{ |a, b| b <=> a }
+  counter += 1
+end
 
 src = new_src               
 
